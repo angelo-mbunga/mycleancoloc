@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mycleancoloc/static/css/main.71a19bb4.css",
-    "main.js": "/mycleancoloc/static/js/main.48bdca70.js",
+    "main.css": "/mycleancoloc/static/css/main.d7358475.css",
+    "main.js": "/mycleancoloc/static/js/main.9ba99d16.js",
     "static/js/787.28cb0dcd.chunk.js": "/mycleancoloc/static/js/787.28cb0dcd.chunk.js",
     "static/media/Archivo-Medium.ttf": "/mycleancoloc/static/media/Archivo-Medium.e97cd30e553ba9fd0a65.ttf",
     "static/media/Archivo-Regular.ttf": "/mycleancoloc/static/media/Archivo-Regular.77b3b9481f1277a47dec.ttf",
@@ -10,12 +10,12 @@
     "static/media/Prata-Regular.ttf": "/mycleancoloc/static/media/Prata-Regular.2eeab737052a4ae3b2a9.ttf",
     "static/media/teamspirit.svg": "/mycleancoloc/static/media/teamspirit.12061791d4e8d8d48edff75f367aa393.svg",
     "index.html": "/mycleancoloc/index.html",
-    "main.71a19bb4.css.map": "/mycleancoloc/static/css/main.71a19bb4.css.map",
-    "main.48bdca70.js.map": "/mycleancoloc/static/js/main.48bdca70.js.map",
+    "main.d7358475.css.map": "/mycleancoloc/static/css/main.d7358475.css.map",
+    "main.9ba99d16.js.map": "/mycleancoloc/static/js/main.9ba99d16.js.map",
     "787.28cb0dcd.chunk.js.map": "/mycleancoloc/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.71a19bb4.css",
-    "static/js/main.48bdca70.js"
+    "static/css/main.d7358475.css",
+    "static/js/main.9ba99d16.js"
   ]
 }
