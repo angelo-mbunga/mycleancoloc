@@ -1,32 +1,32 @@
 import iconCorbeille from '../images/bin.png';
 import iconPreview from '../images/preview.png';
 
-export default function TechnoItem(props) {
+export default function TaskItem(props) {
     
-    const { techno, submit } = props;
+    const { task, submit } = props;
 
     return (
         <>
             <div className="card">
-                    <input type="radio" id="contactChoice3" name="contact" value={techno.technoid}></input>
+                    <input type="radio" id="contactChoice3" name="contact" value={task.taskid}></input>
                 <div className="task-details">
                     <div className='task-category'>
-                        <span className='badge-task badge-task-category'>{techno.technocategory}</span>
+                        <span className='badge-task badge-task-category'>{task.taskcategory}</span>
                             {(() => {
-                                if (techno.technotarget !== "") {
+                                if (task.tasktarget !== "") {
                                     return (
-                                        <span className='badge-task badge-task-target'>{techno.technotarget}</span>
+                                        <span className='badge-task badge-task-target'>{task.tasktarget}</span>
                                     )
                                 }
                             })()}
                     </div>
                     <div className='task-name'>
-                        <p>{techno.technoname}</p>
+                        <p>{task.taskname}</p>
                     </div>
                 </div>
                 <div className="task-icons">
                     <img className="btn-preview" src={iconPreview} alt='Apercu'/>
-                    <img className="btn-delete" src={iconCorbeille} alt='Corbeille' onClick={() => submit(techno.technoid)}/>
+                    <img className="btn-delete" src={iconCorbeille} alt='Corbeille' onClick={() => submit(task.taskid)}/>
                 </div>
             </div>
         </>

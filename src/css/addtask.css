@@ -1,4 +1,4 @@
-.add-techno {
+.add-task {
     padding: 0 20px 20px 20px;
 }
 .add-task-header{
@@ -118,7 +118,7 @@ textarea{
   .add-task-header{
     border-radius: initial;
   }
-  .add-techno{
+  .add-task{
     height: 100%;
   }
   .add-task-header p{

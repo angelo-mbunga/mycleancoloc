@@ -1,8 +1,8 @@
 @import './main.css';
 @import './home.css';
-@import './addtechno.css';
-@import './technolist.css';
-@import './technoitem.css';
+@import './addtask.css';
+@import './tasklist.css';
+@import './taskitem.css';
 @import './galleryavatar.css';
 @import './customUi.css';
 @import './deletemodal.css';

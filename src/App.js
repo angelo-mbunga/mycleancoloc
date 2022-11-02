@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './css/app.css';
 import Home from './pages/Home';
-import AddTechno from './pages/AddTechno';
-import TechnoList from './pages/TechnoList';
+import AddTask from './pages/AddTask';
+import TaskList from './pages/TaskList';
 import { v4 } from 'uuid';
 import useLocalStorage from './hooks/useLocalStorage';
 import { confirmAlert } from "react-confirm-alert";
@@ -12,19 +12,19 @@ import {valideString, valideTextarea} from './assets/Regex/Regex';
 
 function App() {
 
-  const [technos, setTechnos] = useState([]);
-  const STORAGE_KEY = "technos";
-  const [storedTechnos, setStoredTechnos] = useLocalStorage(STORAGE_KEY, []);
+  const [tasks, setTasks] = useState([]);
+  const STORAGE_KEY = "tasks";
+  const [storedTasks, setStoredTasks] = useLocalStorage(STORAGE_KEY, []);
 
     useEffect(() => {
 
-      setTechnos(storedTechnos);
+      setTasks(storedTasks);
     }, []);
 
     useEffect(() => {
       
-      setStoredTechnos(technos);
-    }, [technos]);
+      setStoredTasks(tasks);
+    }, [tasks]);
     
   
   function submit(id) {
@@ -34,7 +34,7 @@ function App() {
       buttons: [
         {
           label: "Oui",
-          onClick: () => handleDeleteTechno(id)
+          onClick: () => handleDeleteTask(id)
         },
         {
           label: "Non"
@@ -43,23 +43,23 @@ function App() {
     });
   };
 
-  function handleAddTechno(techno) {
-     if (techno.technoname !== "" && techno.technocategory !== "") {
-      if (valideString.test(techno.technoname) && valideString.test(techno.technocategory)) {
-        if (techno.technodescription !=="" && valideTextarea.test(techno.technodescription) === true) {
-          setTechnos([...technos, {...techno, technoid: v4()}]);
+  function handleAddTask(task) {
+     if (task.taskname !== "" && task.taskcategory !== "") {
+      if (valideString.test(task.taskname) && valideString.test(task.taskcategory)) {
+        if (task.taskdescription !=="" && valideTextarea.test(task.taskdescription) === true) {
+          setTasks([...tasks, {...task, taskid: v4()}]);
           return true
         }
         else {
-          setTechnos([...technos, {...techno, technoid: v4()}]);
+          setTasks([...tasks, {...task, taskid: v4()}]);
           return true;
         }
       }
     }
   }
 
-  function handleDeleteTechno(id) {
-    setTechnos(technos.filter((tech) => tech.technoid !== id))
+  function handleDeleteTask(id) {
+    setTasks(tasks.filter((tech) => tech.taskid !== id))
   }
 
   return (
@@ -67,8 +67,8 @@ function App() {
       <div className='main'>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/ajouter" element={<AddTechno handleAddTechno={handleAddTechno}/>} />
-        <Route path="/liste" element={<TechnoList technos={technos} submit={submit}/>} />
+        <Route path="/ajouter" element={<AddTask handleAddTask={handleAddTask}/>} />
+        <Route path="/liste" element={<TaskList tasks={tasks} submit={submit}/>} />
       </Routes>
       </div>
     </>

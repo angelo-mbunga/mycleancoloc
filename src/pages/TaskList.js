@@ -1,24 +1,24 @@
 import { NavLink } from "react-router-dom";
-import TechnoItem from '../components/TechnoItem'; 
+import TaskItem from '../components/TaskItem'; 
 import GalleryAvatar from "../components/GalleryAvatar";
 import iconAdd from '../images/add.png';
 import iconBack from '../images/back-btn.png';
 
-export default function TechnoList(props) {
+export default function TaskList(props) {
 
-    const { technos, submit } = props;
+    const { tasks, submit } = props;
 
     return (
         <>
             <div className="list-task-header">
                 <GalleryAvatar/>
             </div>
-            <div className="techno-list">
+            <div className="task-list">
                 <h1>Liste des tâches</h1>
                 <div>
                     {
-                        technos.map(techno => (
-                            <TechnoItem techno={techno} key={techno.technoid} submit={submit}/>
+                        tasks.map(task => (
+                            <TaskItem task={task} key={task.taskid} submit={submit}/>
                         ))
                     }
                 </div>
