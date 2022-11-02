@@ -1,0 +1,21 @@
+.react-confirm-alert-button-group{
+    justify-content: none;
+}
+.react-confirm-alert-button-group > button:first-child{
+    background-color: #37b24d;
+}
+.react-confirm-alert-button-group > button:first-child:hover{
+    background-color: #2f9e44;
+}
+.react-confirm-alert-button-group > button:last-child{
+    background-color: #f03e3e;
+}
+.react-confirm-alert-button-group > button:last-child:hover{
+    background-color: #e03131;
+}
+
+@media screen and (max-width: 480px) {
+    .react-confirm-alert-body{
+        width: 80%;
+    }
+}

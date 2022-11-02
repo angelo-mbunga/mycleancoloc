@@ -1,0 +1,69 @@
+.techno-list{
+    padding: 0 20px 20px 20px;
+}
+.list-task-header{
+    background-color: #38D9A9;
+    border-radius: 18px 18px 0 0;
+    padding: 0 20px;
+}
+.list-task-header p{
+    font-family: 'Prata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    padding-top: 10px;
+    margin-top: 5px;
+}
+h1 {
+    text-align: left;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+.list-task-footer{
+    padding: 10px 20px 20px 20px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: auto;
+}
+.list-task-footer p{
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    margin: 0;
+}
+.list-task-footer a{
+    text-decoration: none;
+    color: #343A40 ; 
+}
+.list-task-footer img:hover{
+    transform: scale(1.1);
+}
+.back-btn, .add-task-btn {
+    width: 50%;
+}
+@media screen and (max-width: 480px) {
+    .list-task-header{
+        border-radius: initial;
+    }
+    .list-task-header p{
+        font-size: 24px;
+    }
+    .list-task-footer p{
+        font-size: 12px;
+        padding: 5px 0;
+    }
+    .list-task-footer img{
+        transform: scale(1.3);
+    }
+}
+@media screen and (max-width: 768px) {
+    .list-task-footer{
+        flex-direction: row;
+    }
+    .back-btn, .add-task-btn {
+        width: 50%;
+    }
+}

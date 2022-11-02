@@ -1,0 +1,123 @@
+.card{
+    padding: 10px;
+    border: none;
+    margin: 10px 0;
+    background-color:#F8F9FA;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+
+}
+.card:hover{
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.1);
+}
+.task-details{
+    width: 79%;
+    padding-left: 10px;
+}
+.task-icons{
+    width: 19%;
+    text-align: center;
+    margin: auto;
+}
+.task-icons img{
+    cursor: pointer;
+    height: 15px;
+    margin: 0 8px;
+}
+.task-icons img:hover{
+    transform: scale(1.1);
+}
+.btn-delete{
+    height: 17px;
+}
+.task-category{
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+}
+.task-name{
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+}
+.badge-task{
+    border-radius: 15px;
+    padding: 4px 10px;
+    color: white;
+    letter-spacing: 1px;
+}
+.badge-task-category{
+    background-color: #0ca678;
+}
+.badge-task-target{
+    background-color: #329DD3;
+    margin: 0 15px;
+}
+
+@media screen and (max-width: 768px ) {
+    h1 {
+        text-align: center;
+    }
+    .card{
+        flex-direction: column;
+        text-align: center;
+    }
+    .task-icons{
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+    .task-details{
+        width: 100%;
+        padding: 10px 0;
+    }
+    .task-name{
+        padding-top: 10px;
+    }
+    .badge-task-target{
+        margin: 0;
+    }
+    .badge-task{
+        display: inline-block;
+        margin: 5px 0;
+    }
+}
+@media screen and (max-width: 480px) {
+    .card{
+        flex-direction: row;
+    }
+    .task-details{
+        padding: 5px 0;
+    }
+    .task-category{
+        text-align: left;
+    }
+    .task-name{
+        padding: 0;
+    }
+    .task-name p{
+        padding: 0 5px;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: left;
+    }
+    .task-icons{
+        width: 33%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .badge-task{
+        padding: 4px 12px;
+        font-size: 12px;
+    }
+    .badge-task-target{
+        margin: 0 10px;
+    }
+}
+  

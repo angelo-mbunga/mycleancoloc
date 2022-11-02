@@ -1,0 +1,102 @@
+.home{
+    text-align: center;
+}
+.img-header{
+    background-color: #38D9A9;
+    height: 50%;
+    border-radius: 18px 18px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    display: block;
+    margin: auto;
+    width: 263px;
+    height: 194px;
+    padding: 10px 0;
+}
+.app-details{
+    padding: 10px 0;
+}
+.app-slogan {
+    font-family: 'Prata', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    width: 66%;
+    margin: 10px auto;
+    text-align: center;
+}
+.app-description {
+    font-family: 'Archivo', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 10px auto;
+}
+.home-nav{
+    padding-bottom: 20px;
+}
+.cta-home {
+    background: #ffd43b;
+    border-radius: 36px;
+    border: none;
+    padding: 12px 40px;
+    margin: 5px 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.cta-home:hover {
+    background: #fab005;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
+}
+.cta-home a{
+    text-decoration: none;
+    color:#343a40;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 480px) {
+    .home{
+        height: 100%;
+    }
+    .img-header{
+        height: 33%;
+        border-radius: initial;
+    }
+    .app-details, .home-nav{
+        padding: 20px 30px;
+    }
+    .app-slogan {
+        font-size: 30px;
+        width: 100%;
+    }
+    .app-description {
+        margin: 20px auto;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .cta-home {
+        width: 66%;
+        margin: 10px auto;
+    }
+    .cta-home a{
+        font-size: 16px;
+    }
+}
+
+@media screen and(max-width: 821px) {
+    .app-slogan {
+        width: 80%;
+    }
+    .app-description {
+        width: 80%;
+        padding: 10px 0;
+    }
+    .img {
+        width: 100%;
+        height: auto;
+      }
+}

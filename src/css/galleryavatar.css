@@ -1,0 +1,19 @@
+.gallery-avatar{
+    padding: 10px 0;
+}
+.btn-add-roomate{
+  cursor: pointer;
+}
+.btn-add-roomate:hover{
+  transform: scale(1.1);
+}
+.gallery-avatar img{
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 480px) {
+  .gallery-avatar{
+    text-align: center;
+    width: 100%;
+  }
+} 
