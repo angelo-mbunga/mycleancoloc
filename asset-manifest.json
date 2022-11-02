@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/mycleancoloc/static/css/main.a6ba0e48.css",
+    "main.js": "/mycleancoloc/static/js/main.04f32644.js",
+    "static/js/787.28cb0dcd.chunk.js": "/mycleancoloc/static/js/787.28cb0dcd.chunk.js",
+    "static/media/Archivo-Medium.ttf": "/mycleancoloc/static/media/Archivo-Medium.e97cd30e553ba9fd0a65.ttf",
+    "static/media/Archivo-Regular.ttf": "/mycleancoloc/static/media/Archivo-Regular.77b3b9481f1277a47dec.ttf",
+    "static/media/Archivo-Bold.ttf": "/mycleancoloc/static/media/Archivo-Bold.61aafac17987baad2c38.ttf",
+    "static/media/Archivo-SemiBold.ttf": "/mycleancoloc/static/media/Archivo-SemiBold.21567093aa10fb72c2a7.ttf",
+    "static/media/Prata-Regular.ttf": "/mycleancoloc/static/media/Prata-Regular.2eeab737052a4ae3b2a9.ttf",
+    "static/media/teamspirit.svg": "/mycleancoloc/static/media/teamspirit.12061791d4e8d8d48edff75f367aa393.svg",
+    "index.html": "/mycleancoloc/index.html",
+    "main.a6ba0e48.css.map": "/mycleancoloc/static/css/main.a6ba0e48.css.map",
+    "main.04f32644.js.map": "/mycleancoloc/static/js/main.04f32644.js.map",
+    "787.28cb0dcd.chunk.js.map": "/mycleancoloc/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6ba0e48.css",
+    "static/js/main.04f32644.js"
+  ]
+}
