@@ -6,7 +6,7 @@ import iconBack from '../images/back-btn.png';
 
 export default function TaskList(props) {
 
-    const { tasks, submit } = props;
+    const { tasks, submit, sendIdtoUrl } = props;
 
     return (
         <>
@@ -16,11 +16,9 @@ export default function TaskList(props) {
             <div className="task-list">
                 <h1>Liste des tâches</h1>
                 <div>
-                    {
-                        tasks.map(task => (
-                            <TaskItem task={task} key={task.taskid} submit={submit}/>
-                        ))
-                    }
+                    {tasks.map(task => (
+                        <TaskItem task={task} key={task.taskid} submit={submit} sendIdtoUrl={sendIdtoUrl}/>
+                    ))}
                 </div>
             </div>
             <div className='list-task-footer'>

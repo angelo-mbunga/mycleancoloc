@@ -4,11 +4,13 @@ import './css/app.css';
 import Home from './pages/Home';
 import AddTask from './pages/AddTask';
 import TaskList from './pages/TaskList';
-import { v4 } from 'uuid';
+import TaskDetails from './pages/TaskDetails';
+import { v1 } from 'uuid';
 import useLocalStorage from './hooks/useLocalStorage';
 import { confirmAlert } from "react-confirm-alert";
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import {valideString, valideTextarea} from './assets/Regex/Regex';
+import { useNavigate } from "react-router-dom";
 
 function App() {
 
@@ -16,13 +18,13 @@ function App() {
   const STORAGE_KEY = "tasks";
   const [storedTasks, setStoredTasks] = useLocalStorage(STORAGE_KEY, []);
 
-    useEffect(() => {
+  const navigate = useNavigate();
 
+    useEffect(() => {
       setTasks(storedTasks);
     }, []);
 
     useEffect(() => {
-      
       setStoredTasks(tasks);
     }, [tasks]);
     
@@ -41,17 +43,17 @@ function App() {
         }
       ]
     });
-  };
+  }
 
   function handleAddTask(task) {
-     if (task.taskname !== "" && task.taskcategory !== "") {
-      if (valideString.test(task.taskname) && valideString.test(task.taskcategory)) {
+     if (task.taskname !== "" && task.taskplace !== "") {
+      if (valideString.test(task.taskname) && valideString.test(task.taskplace)) {
         if (task.taskdescription !=="" && valideTextarea.test(task.taskdescription) === true) {
-          setTasks([...tasks, {...task, taskid: v4()}]);
+          setTasks([...tasks, {...task, taskid: v1()}]);
           return true
         }
         else {
-          setTasks([...tasks, {...task, taskid: v4()}]);
+          setTasks([...tasks, {...task, taskid: v1()}]);
           return true;
         }
       }
@@ -62,13 +64,18 @@ function App() {
     setTasks(tasks.filter((tech) => tech.taskid !== id))
   }
 
+  function sendIdtoUrl(id) {
+    navigate('/liste/details/'+id);
+  }
+
   return (
     <>
       <div className='main'>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ajouter" element={<AddTask handleAddTask={handleAddTask}/>} />
-        <Route path="/liste" element={<TaskList tasks={tasks} submit={submit}/>} />
+        <Route path="/liste" element={<TaskList tasks={tasks} submit={submit} sendIdtoUrl={sendIdtoUrl}/>} />
+        <Route path="/liste/details/:id" element={<TaskDetails tasks={tasks}/>} />
       </Routes>
       </div>
     </>

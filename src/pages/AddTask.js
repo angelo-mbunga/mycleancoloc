@@ -6,7 +6,7 @@ export default function AddTask(props) {
 
     const [task, setTask] = useState({
         taskname : '',
-        taskcategory : '',
+        taskplace : '',
         tasktarget : '',
         taskdescription : '',
     });
@@ -23,7 +23,7 @@ export default function AddTask(props) {
         if (handleAddTask(task)) {
             setTask({
                 taskname : '',
-                taskcategory : '',
+                taskplace : '',
                 tasktarget : '',
                 taskdescription : '',
             });
@@ -53,9 +53,9 @@ export default function AddTask(props) {
                                 <input type="text" name="taskname" id="taskname" required value={task.taskname} onChange={ (evt) => handleChange(evt) }/>
                                 <div className="select-group">
                                     <div className="select-input">
-                                        <label htmlFor="taskcategory">Piece de la maison * :</label>
+                                        <label htmlFor="taskplace">Piece de la maison * :</label>
                                         <br />
-                                        <select name="taskcategory" id="taskcategory" required value={task.taskcategory} onChange={ (evt) => handleChange(evt) }>
+                                        <select name="taskplace" id="taskplace" required value={task.taskplace} onChange={ (evt) => handleChange(evt) }>
                                             <option value="">Selectionner</option>
                                             <option value="Salon">Salon</option>
                                             <option value="Cuisine">Cuisine</option>

@@ -33,7 +33,7 @@
 .btn-delete{
     height: 17px;
 }
-.task-category{
+.task-place{
     font-family: 'Archivo';
     font-style: normal;
     font-weight: 500;
@@ -51,7 +51,7 @@
     color: white;
     letter-spacing: 1px;
 }
-.badge-task-category{
+.badge-task-place{
     background-color: #0ca678;
 }
 .badge-task-target{
@@ -94,7 +94,7 @@
     .task-details{
         padding: 5px 0;
     }
-    .task-category{
+    .task-place{
         text-align: left;
     }
     .task-name{
